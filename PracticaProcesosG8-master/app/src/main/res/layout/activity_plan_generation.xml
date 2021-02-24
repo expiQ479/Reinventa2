@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/covidrun_mainColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="@string/plan_topBarPlan"
+        app:titleMargin="4dp"
+        app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="315dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tituloPlanSemanal"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="casual"
+            android:text="Tu planazo de hoy es:"
+            android:textAlignment="center"
+            android:textColor="@color/covidrun_mainColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/planazoSemanal"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_below="@+id/tituloPlanSemanal"
+            android:layout_marginTop="9dp"
+            android:fontFamily="casual"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+        <TextView
+            android:id="@+id/masSobreElPlanazoSemanal"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_below="@+id/planazoSemanal"
+            android:layout_marginTop="6dp"
+            android:fontFamily="casual"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/plan_volverAtras"
+        android:onClick="goBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="done"
+        android:text="¡Hecho!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
