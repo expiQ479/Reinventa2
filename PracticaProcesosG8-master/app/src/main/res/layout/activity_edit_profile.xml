@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    tools:context=".viewModel.profile.EditProfile">
+
+
+    <EditText
+        android:id="@+id/reg_nombrePila"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_nombrePila"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_claveUsuario2" />
+
+    <EditText
+        android:id="@+id/reg_apellidos"
+
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_apellidos"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_nombrePila" />
+
+    <EditText
+        android:id="@+id/reg_correoElectronico"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_correoElectronico"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etiqEditProfile" />
+
+    <EditText
+        android:id="@+id/reg_claveUsuario"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_claveUsuario"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_correoElectronico" />
+
+    <EditText
+        android:id="@+id/reg_claveUsuario2"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_claveUsuario2"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_claveUsuario" />
+
+    <EditText
+        android:id="@+id/reg_pregSeguridad"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_pregSeguridad"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_apellidos" />
+
+    <EditText
+        android:id="@+id/reg_respSeguridad"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_respSeguridad"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_pregSeguridad" />
+
+    <EditText
+        android:id="@+id/reg_telefono"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:digits="+01234546789"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_telefono"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_respSeguridad" />
+
+    <EditText
+        android:id="@+id/reg_edad"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/reg_edad"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_telefono" />
+
+    <Button
+        android:id="@+id/validateData"
+        android:layout_width="346dp"
+        android:layout_height="52dp"
+        android:onClick="changeProfile"
+        android:text="@string/buttonValidate"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reg_edad"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/etiqEditProfile"
+        android:layout_width="208dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/editProfile"
+        android:textColor="@color/covidrun_mainColor"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

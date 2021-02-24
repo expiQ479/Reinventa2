@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">CovidRUN</string>
+    <!-- Strings related to Bienvenida screen -->
+    <string name="bienvenida_description">La mejor <i>app</i> para <i>covinfectados</i></string>
+    <!-- Strings related to Jorge & Diego's login -->
+    <string name="inicioSesion_cambiarClave">Recuperar mi contraseña</string>
+    <string name="inicioSesion_clave">Contraseña</string>
+    <string name="inicioSesion_nombre">Nombre</string>
+    <string name="inicioSesion_iniciarSesion">Iniciar Sesión</string>
+    <string name="inicioSesion_irRegistro">Registrarse</string>
+    <string name="inicioSesion_bienvenida">Inicio de sesión</string>
+    <!-- Registro -->
+    <string name="reg_nombreUsuario">Nombre de usuario</string>
+    <string name="reg_correoElectronico">Correo electrónico</string>
+    <string name="reg_claveUsuario">Contraseña</string>
+    <string name="reg_claveUsuario2">Repetir contraseña</string>
+    <string name="reg_nombrePila">Nombre</string>
+    <string name="reg_apellidos">Apellidos</string>
+    <string name="reg_pregSeguridad">Pregunta de seguridad</string>
+    <string name="reg_respSeguridad">Respuesta de seguridad</string>
+    <string name="reg_telefono">Teléfono</string>
+    <string name="reg_edad">Edad</string>
+    <string name="reg_btnRegistrarse">Registrarse</string>
+    <string name="reg_volverLogin">¿Ya estás registrado? Pulsa aquí para volver al login</string>
+    <!-- Recuperación de clave -->
+    <string name="recClave_titulo">Recuperación de contraseña</string>
+    <string name="recClave_pideCorreo">Correo electrónico</string>
+    <string name="recClave_pregSegEs">La pregunta de seguridad es:</string>
+    <string name="recClave_pregResp">¿Cuál es la respuesta?</string>
+    <string name="recClave_nuevaClave">Nueva contraseña</string>
+    <string name="recClave_repetirClave">Repita la nueva contraseña</string>
+    <string name="recClave_sigPant">Continuar</string>
+    <string name="recClave_finPant">Finalizar</string>
+    <!-- Perfil -->
+    <string name="etiqEditProfile">Editar perfil</string>
+    <string name="editProfile">Editar perfil</string>
+    <string name="buttonValidate">Validar</string>
+    <!-- Plan -->
+    <string name="plan_topBarPlan">Plan</string>
+    <string name="plan_volverAtras">Volver atrás</string>
+    <string name="profile_ranking">Ranking</string>
+    <string name="profile_experiencia">Experiencia</string>
+    <string name="profile_nivel">Nivel</string>
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:isScrollContainer="true"
+    android:keepScreenOn="true"
+    tools:context=".viewModel.loginRegister.Login">
+
+    <TextView
+        android:id="@+id/recuperarContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/formularioLogin"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:autoLink="all"
+        android:gravity="center"
+        android:onClick="vistaRecuperarClave"
+        android:text="@string/inicioSesion_cambiarClave"
+        android:textColor="@color/covidrun_mainColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Introduccion"
+        android:layout_width="293dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/inicioSesion_bienvenida"
+        android:textAlignment="center"
+        android:textColor="@color/covidrun_mainColor"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        app:srcCompat="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/formularioLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Introduccion"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="13dp">
+
+        <EditText
+            android:id="@+id/login_nombreUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/inicioSesion_nombre"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/login_claveUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_nombreUsuario"
+            android:layout_marginTop="5sp"
+            android:ems="10"
+            android:hint="@string/inicioSesion_clave"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:id="@+id/iniciarSesion"
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/login_claveUsuario"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:onClick="iniciarSesion"
+            android:text="@string/inicioSesion_iniciarSesion"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/covidrun_mainColor"
+            app:cornerRadius="300dp"
+            app:strokeColor="#03A9F4"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/irRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iniciarSesion"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="100dp"
+            android:onClick="vistaRegistro"
+            android:text="@string/inicioSesion_irRegistro"
+            android:textColor="#E01F5B"
+            android:textSize="16sp"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="300dp"
+            app:strokeColor="#03A9F4"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+
+</RelativeLayout>
