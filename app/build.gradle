@@ -1,7 +1,16 @@
 plugins {
     id 'com.android.application'
+    id "org.sonarqube" version "2.8"
 }
-
+sonarqube{
+    properties {
+        property "sonar.projectKey", "ggp_covidrun"
+        property "sonar.organization", "ggp"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.login", "e563535d407ae2c2a059075fb525a52a3cad3b3"
+        property "sonar.branch.me", System.getenv("BRANCH")
+    }
+}
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
