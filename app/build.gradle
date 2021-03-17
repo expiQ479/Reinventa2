@@ -32,10 +32,10 @@ android {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "Agudroid_Reinventa2" //este es el proyecto de git que se ha enlazado a sonar
-        property "sonar.organization", "agudroid" //aqui cada uno tiene que poner su nombre de organization que le sale en sonar
+        property "sonar.projectKey", "expiQ479_Reinventa2" //este es el proyecto de git que se ha enlazado a sonar
+        property "sonar.organization", "expiq479" //aqui cada uno tiene que poner su nombre de organization que le sale en sonar
         property "sonar.host.url", "https://sonarcloud.io/"
-        property "sonar.login", "d6e4bdb864b2d495961c2878a07a38fcae73618c"
+        property "sonar.login", "394273a50a71e5b03a17f31aa13762d09f89f9f0"
         property "sonar.branch.name", System.getenv("BRANCH")
     }
 }
@@ -49,7 +49,10 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation 'androidx.navigation:navigation-fragment:2.2.2'
     implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'org.jetbrains:annotations:15.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.2.6'
 }

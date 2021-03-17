@@ -1,4 +1,4 @@
-package com.doubletrouble.covidrun;
+/*package com.doubletrouble.covidrun;
 
 import androidx.room.testing.MigrationTestHelper;
 import androidx.sqlite.db.SupportSQLiteDatabase;
@@ -45,4 +45,4 @@ public class TestMigracion2 {
         // MigrationTestHelper automatically verifies the schema changes,
         // but you need to validate that the data was migrated properly.
     }
-}
+}*/

@@ -23,6 +23,6 @@ android:
     - quemu-system-x86_64
     addons:
         sonarcloud:
-          organization: "agudroid" #aqui cada uno tiene que poner su nombre de organization que le sale en sonar
+          organization: "expiq479" #aqui cada uno tiene que poner su nombre de organization que le sale en sonar
           token:
-            secure: "d6e4bdb864b2d495961c2878a07a38fcae73618c" # encrypted value of your token
+            secure: "394273a50a71e5b03a17f31aa13762d09f89f9f0" # encrypted value of your token
