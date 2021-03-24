@@ -32,10 +32,10 @@ android {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "Agudroid_Reinventa2" //este es el proyecto de git que se ha enlazado a sonar
-        property "sonar.organization", "agudroid" //aqui cada uno tiene que poner su nombre de organization que le sale en sonar
+        property "sonar.projectKey", "expiQ479_Reinventa2" //este es el proyecto de git que se ha enlazado a sonar
+        property "sonar.organization", "expiq479" //aqui cada uno tiene que poner su nombre de organization que le sale en sonar
         property "sonar.host.url", "https://sonarcloud.io/"
-        property "sonar.login", "d6e4bdb864b2d495961c2878a07a38fcae73618c"
+        property "sonar.login", "394273a50a71e5b03a17f31aa13762d09f89f9f0"
         property "sonar.branch.name", System.getenv("BRANCH")
     }
 }

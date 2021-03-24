@@ -87,6 +87,7 @@ task gitPush {
         }
     }
 }
+
 task gitCompletePush {
     description "This task do all the processes to do push (add, commit and push)"
     dependsOn "gitAdd"
