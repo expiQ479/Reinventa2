@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.doubletrouble.covidrun.viewModel.loginRegister.Login;
+import com.doubletrouble.covidrun.viewmodel.loginRegister.Login;
 
 public class Bienvenida extends AppCompatActivity {
 
