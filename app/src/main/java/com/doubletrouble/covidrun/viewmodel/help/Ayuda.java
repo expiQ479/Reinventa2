@@ -1,4 +1,4 @@
-package com.doubletrouble.covidrun.viewModel.help;
+package com.doubletrouble.covidrun.viewmodel.help;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,31 +9,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.doubletrouble.covidrun.Home;
 import com.doubletrouble.covidrun.R;
 
-public class Ayuda2 extends AppCompatActivity {
-
+public class Ayuda extends AppCompatActivity {
     String loggedInUser;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Ayuda2");
+        setTitle("Ayuda");
 
         loggedInUser = getIntent().getExtras().getString("loggedInUser");
 
-        setContentView(R.layout.activity_ayuda2);
+        setContentView(R.layout.activity_ayuda);
     }
 
-    public void vistaHomeAyuda2(View view){
-        Intent goToHome = new Intent(Ayuda2.this, Home.class);
+    public void vistaHomeAyuda(View view){
+        Intent goToHome = new Intent(Ayuda.this, Home.class);
         goToHome.putExtra("loggedInUser", loggedInUser);
 
         startActivity(goToHome);
     }
 
-    public void vistaAnterior(View view){
-        Intent goToHelp = new Intent(Ayuda2.this,Ayuda.class);
-        goToHelp.putExtra("loggedInUser", loggedInUser);
+    public void vistaSiguiente(View view){
+        Intent goToNext = new Intent(Ayuda.this,Ayuda2.class);
+        goToNext.putExtra("loggedInUser", loggedInUser);
 
-        startActivity(goToHelp);
+        startActivity(goToNext);
     }
 }

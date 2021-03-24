@@ -1,4 +1,4 @@
-package com.doubletrouble.covidrun.viewModel.profile;
+package com.doubletrouble.covidrun.viewmodel.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
 

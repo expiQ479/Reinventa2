@@ -1,4 +1,4 @@
-package com.doubletrouble.covidrun.viewModel.plan;
+package com.doubletrouble.covidrun.viewmodel.plan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,21 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.doubletrouble.covidrun.Home;
 import com.doubletrouble.covidrun.R;
-import com.doubletrouble.covidrun.Utilidades;
 import com.doubletrouble.covidrun.db.AppDatabase;
 import com.doubletrouble.covidrun.db.PlanDAO;
-import com.doubletrouble.covidrun.db.PlanesUsuarioDAO;
-import com.doubletrouble.covidrun.db.UsuarioDAO;
 import com.doubletrouble.covidrun.model.Plan;
-import com.doubletrouble.covidrun.model.Planes_Usuario;
-import com.doubletrouble.covidrun.model.Usuario;
-
-import java.util.Random;
 
 public class PlanCreationUsuario extends AppCompatActivity {
         String loggedInUser;

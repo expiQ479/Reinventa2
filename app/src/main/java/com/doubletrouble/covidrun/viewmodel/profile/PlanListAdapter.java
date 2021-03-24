@@ -1,4 +1,4 @@
-package com.doubletrouble.covidrun.viewModel.profile;
+package com.doubletrouble.covidrun.viewmodel.profile;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.doubletrouble.covidrun.R;
-import com.doubletrouble.covidrun.db.AppDatabase;
 import com.doubletrouble.covidrun.model.Plan;
 
 import java.util.ArrayList;
