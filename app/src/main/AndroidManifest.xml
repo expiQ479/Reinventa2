@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/iconapp"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".viewmodel.plan.PlanGeneration"></activity>
+        <activity android:name=".viewmodel.plan.PlanGeneration"/>
         <activity android:name=".Bienvenida">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
