@@ -2,13 +2,18 @@ package com.doubletrouble.covidrun;
 
 import android.content.Context;
 
-import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+
+import com.doubletrouble.covidrun.db.AppDatabase;
+import com.doubletrouble.covidrun.model.Plan;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -22,5 +27,18 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.doubletrouble.myapplication", appContext.getPackageName());
+    }
+
+    @Test
+    public void createNewPlan(){
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        Plan testPlan = new Plan("test","test",1,1,1);
+        List<Plan> planList;
+        planList = AppDatabase.getDatabase(appContext).planDao().getAll();
+        int numberOfPlans= planList.size();
+        AppDatabase.getDatabase(appContext).planDao().insertPlan(testPlan);
+        planList = AppDatabase.getDatabase(appContext).planDao().getAll();
+        int newNumberOfPlans=planList.size();
+        assertEquals(numberOfPlans+1,newNumberOfPlans);
     }
 }
