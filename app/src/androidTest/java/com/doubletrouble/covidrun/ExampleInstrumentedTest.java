@@ -7,6 +7,7 @@ import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.doubletrouble.covidrun.db.AppDatabase;
 import com.doubletrouble.covidrun.model.Plan;
+import com.doubletrouble.covidrun.model.Usuario;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,5 +41,14 @@ public class ExampleInstrumentedTest {
         planList = AppDatabase.getDatabase(appContext).planDao().getAll();
         int newNumberOfPlans=planList.size();
         assertEquals(numberOfPlans+1,newNumberOfPlans);
+    }
+    public void createNewUser(){
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        Usuario usuario = new Usuario("Manuel","1234", "manuel99@gmail.com","Manu","Giménez",
+                "¿Quien es tu madre?","Ana","611 35 58 47",35);
+        Usuario existe;
+        existe = AppDatabase.getDatabase(appContext).usuarioDao().buscarUsuario("Manuel");
+
+        assertEquals(existe.nombreUsuario,usuario.getNombreUsuario());
     }
 }
