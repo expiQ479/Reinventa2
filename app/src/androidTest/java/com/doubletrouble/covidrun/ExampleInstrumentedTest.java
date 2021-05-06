@@ -42,13 +42,15 @@ public class ExampleInstrumentedTest {
         int newNumberOfPlans=planList.size();
         assertEquals(numberOfPlans+1,newNumberOfPlans);
     }
+    @Test
     public void createNewUser(){
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         Usuario usuario = new Usuario("Manuel","1234", "manuel99@gmail.com","Manu","Giménez",
                 "¿Quien es tu madre?","Ana","611 35 58 47",35);
-        Usuario existe;
-        existe = AppDatabase.getDatabase(appContext).usuarioDao().buscarUsuario("Manuel");
+        AppDatabase.getDatabase(appContext).usuarioDao().insertUser(usuario);
+        int existe;
+        existe = AppDatabase.getDatabase(appContext).usuarioDao().existeUsuario("Manuel");
 
-        assertEquals(existe.nombreUsuario,usuario.getNombreUsuario());
+        assertEquals(existe,1);
     }
 }
