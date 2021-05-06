@@ -45,12 +45,14 @@ public class ExampleInstrumentedTest {
     @Test
     public void createNewUser(){
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        Usuario usuario = new Usuario("Manuel","1234", "manuel99@gmail.com","Manu","Giménez",
+        Usuario usuario = new Usuario("Marcos","1234", "marcos99@gmail.com","Manu","Giménez",
                 "¿Quien es tu madre?","Ana","611 35 58 47",35);
         AppDatabase.getDatabase(appContext).usuarioDao().insertUser(usuario);
         int existe;
         existe = AppDatabase.getDatabase(appContext).usuarioDao().existeUsuario("Manuel");
 
         assertEquals(existe,1);
+
+        AppDatabase.getDatabase(appContext).usuarioDao().delete(usuario);
     }
 }
