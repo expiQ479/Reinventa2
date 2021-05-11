@@ -1,9 +1,9 @@
-Feature: Aceptar los planes, es decir, hacer un check de los planes hechos
+Feature: Ver todos los planes
   Como un usuario
-  Quiere poder checkear los planes
-  Porque quiero obtener experiencia de los mismos y quiero actualizar mi lista de planes
-	
-  Scenario: Checkear los planes
-	Given Hay planes creados
-	When Presiono el boton de hecho al lado del plan
-	Then Obtengo la experiencia del plan y actualizo el estado del plan a finalizado
+  Quiero ver todos los planes
+  porque quiero ver que he estado haciendo
+
+  Scenario: Ver todos los planes
+    Given Hay planes hechos
+    When Presiono el boton de ver los planes
+    Then Se me muestran todos los planes
