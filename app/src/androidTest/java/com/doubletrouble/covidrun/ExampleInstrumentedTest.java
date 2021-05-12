@@ -55,4 +55,18 @@ public class ExampleInstrumentedTest {
 
         AppDatabase.getDatabase(appContext).usuarioDao().delete(usuario);
     }
+
+    public void deleteUser(){
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+
+        Usuario usuario = new Usuario("Marcos","1234", "marcos99@gmail.com","Manu","Giménez",
+                "¿Quien es tu madre?","Ana","611 35 58 47",35);
+
+        AppDatabase.getDatabase(appContext).usuarioDao().insertUser(usuario);
+
+        usuario = AppDatabase.getDatabase(appContext.getApplicationContext()).usuarioDao().buscarUsuario(usuario.nombreUsuario);
+        AppDatabase.getDatabase(appContext).usuarioDao().delete(usuario);
+        int existe = AppDatabase.getDatabase(appContext).usuarioDao().existeUsuario("Manuel");
+        assertEquals(existe,0);
+    }
 }
