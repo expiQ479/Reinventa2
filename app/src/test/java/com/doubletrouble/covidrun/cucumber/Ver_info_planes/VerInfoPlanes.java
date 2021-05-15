@@ -1,4 +1,4 @@
-package features.Ver_info_planes;
+package com.doubletrouble.covidrun.features.Ver_info_planes;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -6,7 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)
+
 public class VerInfoPlanes {
 
     @Given("^Hay un plan$")
