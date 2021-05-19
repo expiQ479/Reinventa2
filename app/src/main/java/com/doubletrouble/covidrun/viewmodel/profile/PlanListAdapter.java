@@ -11,14 +11,14 @@ import android.widget.TextView;
 import com.doubletrouble.covidrun.R;
 import com.doubletrouble.covidrun.model.Plan;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class PlanListAdapter extends BaseAdapter {
 
-    private ArrayList<Plan> idsPlanesHechos;
-    private Context context;
+    private final List<Plan> idsPlanesHechos;
+    private final Context context;
 
-    public PlanListAdapter(ArrayList<Plan> planes, Context context) {
+    public PlanListAdapter(List<Plan> planes, Context context) {
         this.idsPlanesHechos = planes;
         this.context = context;
     }
@@ -42,14 +42,15 @@ public class PlanListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Plan plan = idsPlanesHechos.get(position);
-
-        convertView = LayoutInflater.from(context).inflate(R.layout.profile_planitem, null);
+        View convertedView;
+        convertedView = LayoutInflater.from(context).inflate(R.layout.profile_planitem, null);
         TextView nombrePlan = (TextView) convertView.findViewById(R.id.nombrePlan);
         TextView descPlan = (TextView) convertView.findViewById(R.id.cuerpoPlan);
 
         nombrePlan.setText(plan.getShortName());
         String salida = plan.getDescription() + " (+" + Math.round(plan.getExperiencePoints()) + ")";
         descPlan.setText(salida);
+        convertView = convertedView;
         return convertView;
     }
 }

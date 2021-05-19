@@ -28,6 +28,12 @@ public class TestMigracion2 {
     }
 
     @Test
+    public void TestDataBaseCreateNewPlan(){
+
+
+    }
+
+    @Test
     public void migrate1To2() throws IOException {
         SupportSQLiteDatabase db = helper.createDatabase(TEST_DB, 1);
 
