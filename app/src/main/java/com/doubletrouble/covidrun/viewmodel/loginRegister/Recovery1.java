@@ -1,4 +1,4 @@
-package com.doubletrouble.covidrun.viewModel.loginRegister;
+package com.doubletrouble.covidrun.viewmodel.loginRegister;
 
 import androidx.appcompat.app.AppCompatActivity;
 

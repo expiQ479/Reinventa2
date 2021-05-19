@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/iconapp"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".viewModel.plan.PlanGeneration"></activity>
+        <activity android:name=".viewmodel.plan.PlanGeneration"/>
         <activity android:name=".Bienvenida">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,19 +22,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".viewModel.loginRegister.Register" />
+        <activity android:name=".viewmodel.loginRegister.Register" />
         <activity
-            android:name=".viewModel.loginRegister.Login"
+            android:name=".viewmodel.loginRegister.Login"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".Home" />
-        <activity android:name=".viewModel.loginRegister.Recovery1" />
-        <activity android:name=".viewModel.plan.PlanCreationUsuario" />
-        <activity android:name=".viewModel.loginRegister.Recovery2" />
-        <activity android:name=".viewModel.loginRegister.Recovery3" />
-        <activity android:name=".viewModel.profile.Profile" />
-        <activity android:name=".viewModel.profile.EditProfile" />
-        <activity android:name=".viewModel.help.Ayuda" />
-        <activity android:name=".viewModel.help.Ayuda2" />
+        <activity android:name=".viewmodel.loginRegister.Recovery1" />
+        <activity android:name=".viewmodel.plan.PlanCreationUsuario" />
+        <activity android:name=".viewmodel.loginRegister.Recovery2" />
+        <activity android:name=".viewmodel.loginRegister.Recovery3" />
+        <activity android:name=".viewmodel.profile.Profile" />
+        <activity android:name=".viewmodel.profile.EditProfile" />
+        <activity android:name=".viewmodel.help.Ayuda" />
+        <activity android:name=".viewmodel.help.Ayuda2" />
     </application>
 
 </manifest>

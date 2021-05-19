@@ -1,25 +1,21 @@
 plugins {
     id 'com.android.application'
+    id "org.sonarqube" version "3.1.1"
+    id("maven-publish")
 }
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId "com.doubletrouble.myapplication"
-        minSdkVersion 19
+        applicationId "com.example.database"
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments += ["room.schemaLocation":
-                                      "$projectDir/schemas".toString()]
-            }
-        }
     }
 
     buildTypes {
@@ -32,37 +28,40 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    sourceSets {
-        // Adds exported schema location as test app assets.
-        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "expiQ479_Reinventa2" //este es el proyecto de git que se ha enlazado a sonar
+        property "sonar.organization", "expiq479" //aqui cada uno tiene que poner su nombre de organization que le sale en sonar
+        property "sonar.host.url", "https://sonarcloud.io/"
+        property "sonar.login", "394273a50a71e5b03a17f31aa13762d09f89f9f0"
+        property "sonar.branch.name", System.getenv("BRANCH")
     }
 }
+
+
 
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.annotation:annotation:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
-    testImplementation 'junit:junit:4.13.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'org.jetbrains:annotations:15.0'
+    testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.2.6'
 
-    def room_version = "2.2.5"
-
-    implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-
-    // optional - RxJava support for Room
-    implementation "androidx.room:room-rxjava2:$room_version"
-
-    // optional - Guava support for Room, including Optional and ListenableFuture
-    implementation "androidx.room:room-guava:$room_version"
-
-    // optional - Test helpers
-    testImplementation "androidx.room:room-testing:$room_version"
-    androidTestImplementation "android.arch.persistence.room:testing:$room_version"
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.test.ext:junit:1.1.2'
+    implementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'info.cukes:cucumber-junit:1.2.4'
+    implementation group: 'info.cukes', name: 'cucumber-android', version: '1.2.4'
+    implementation 'info.cukes:cucumber-picocontainer:1.2.4'
 }
-

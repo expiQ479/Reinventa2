@@ -7,13 +7,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.doubletrouble.covidrun.model.Planes_Usuario;
-import com.doubletrouble.covidrun.viewModel.help.Ayuda;
+import com.doubletrouble.covidrun.viewmodel.help.Ayuda;
 
-import com.doubletrouble.covidrun.viewModel.loginRegister.Login;
-import com.doubletrouble.covidrun.viewModel.plan.PlanGeneration;
-import com.doubletrouble.covidrun.viewModel.profile.Profile;
-import com.doubletrouble.covidrun.viewModel.plan.PlanCreationUsuario;
+import com.doubletrouble.covidrun.viewmodel.loginRegister.Login;
+import com.doubletrouble.covidrun.viewmodel.plan.PlanGeneration;
+import com.doubletrouble.covidrun.viewmodel.profile.Profile;
+import com.doubletrouble.covidrun.viewmodel.plan.PlanCreationUsuario;
 
 public class Home extends AppCompatActivity {
 
