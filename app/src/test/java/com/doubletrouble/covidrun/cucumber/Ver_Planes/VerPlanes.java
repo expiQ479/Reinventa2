@@ -17,12 +17,12 @@ public class VerPlanes {
 
     @When("^Presiono el boton de ver los planes$")
     public void presiono_el_boton_de_ver_los_planes() throws Throwable {
-        mesage = "Prueba";
+        mesage = "Ver planes";
     }
 
     @Then("^Se me muestran todos los planes$")
     public void se_me_muestran_todos_los_planes() throws Throwable {
-        Assert.assertEquals("Prueba",mesage);
+        Assert.assertEquals("Ver planes",mesage);
     }
 
 }

@@ -17,12 +17,12 @@ public class AceptarPlan {
 
         @When("^Presiono el boton de hecho al lado del plan$")
         public void presiono_el_boton_de_hecho_al_lado_del_plan() throws Throwable {
-            mesage = "Prueba";
+            mesage = "Aceptar Plan";
         }
 
         @Then("^Obtengo la experiencia del plan y actualizo el estado del plan a finalizado$")
         public void obtengo_la_experiencia_del_plan_y_actualizo_el_estado_del_plan_a_finalizado() throws Throwable {
-            Assert.assertEquals("Prueba",mesage);
+            Assert.assertEquals("Aceptar Plan",mesage);
         }
 
 

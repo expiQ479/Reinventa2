@@ -12,6 +12,8 @@ import cucumber.api.junit.Cucumber;
                     "src/test/java/com/doubletrouble/covidrun/cucumber/Aceptar_plan/AceptarPlan.feature",
                     "src/test/java/com/doubletrouble/covidrun/cucumber/Ver_info_planes/VerInfoPlanes.feature",
                     "src/test/java/com/doubletrouble/covidrun/cucumber/Ver_Planes/VerPlanes.feature",
+                    "src/test/java/com/doubletrouble/covidrun/cucumber/smoke_Test/Iniciar Sesion.feature",
+                    "src/test/java/com/doubletrouble/covidrun/cucumber/smoke_Test/Registrar usuario.feature",
             },
             glue = "com.doubletrouble.covidrun.cucumber"
     )
