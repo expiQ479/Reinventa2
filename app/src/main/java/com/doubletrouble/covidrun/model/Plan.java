@@ -1,11 +1,8 @@
 package com.doubletrouble.covidrun.model;
 
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
-
-import org.jetbrains.annotations.NotNull;
 
 @Entity(tableName = "planes", indices = {@Index(value = {"id"}, unique = true)})
 public class Plan {
